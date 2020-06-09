@@ -1,7 +1,7 @@
 FROM rocker/r-ver:3.4.4
 
 RUN apt-get update -y && apt-get install -y \
-    wget \
+    wget
     
 RUN mkdir /home/testing
 
