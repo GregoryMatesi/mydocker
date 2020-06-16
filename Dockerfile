@@ -19,3 +19,10 @@ RUN wget https://www.dropbox.com/s/cmq4saduh9gozi9/RFMix_v1.5.4.zip
 RUN unzip RFMix_v1.5.4.zip
 
 RUN mv RFMix_v1.5.4 /usr/local/bin
+
+RUN wget http://dalexander.github.io/admixture/binaries/admixture_linux-1.3.0.tar.gz
+
+RUN tar -zxvf admixture_linux-1.3.0.tar.gz
+
+RUN mv /dist/admixture_linux-1.3.0 /usr/local/bin
+
