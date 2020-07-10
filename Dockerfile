@@ -26,3 +26,9 @@ RUN tar -zxvf admixture_linux-1.3.0.tar.gz
 
 RUN mv /dist/admixture_linux-1.3.0 /usr/local/bin
 
+RUN wget http://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20200616.zip
+
+RUN unzip plink_linux_x86_64_20200616.zip
+
+RUN mv plink /usr/local/bin
+
