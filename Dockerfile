@@ -31,7 +31,9 @@ RUN mv plink /usr/local/bin
 # install pipeline scripts
 RUN mkdir /home/test/shapeit_run
 COPY run_shapeit.sh /home/test/shapeit_run/
+COPY get_valid_variants.R /home/test/shapeit_run/
 
 USER root
 RUN chmod a+x /home/test/shapeit_run/run_shapeit.sh
+RUN chmod a+x /home/test/shapeit_run/get_valid_variants.R
 
