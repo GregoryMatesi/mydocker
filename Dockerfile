@@ -30,7 +30,7 @@ RUN mv plink /usr/local/bin
 
 # install pipeline scripts
 RUN mkdir /home/test/shapeit_run
-COPY run_shapeit.sh /home/test/shapeit_run/
+COPY run_shapeit.sh /home/test/shapeit_run/run_shapeit.sh
 
 USER root
 RUN chmod a+x /home/test/shapeit_run/run_shapeit.sh
