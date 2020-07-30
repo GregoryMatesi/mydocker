@@ -1,21 +1,11 @@
 #!/bin/sh
 
-nr_threads=8
+# number of threads as a parameter
+nr_threads=$0
 
-#shapeit_dir=/home/test/shapeit_input/genetic_map_hapmap/chr22.txt
-#file=/home/test/bard/BARD_chr22
-
-#/sbgenomics/Projects/d7973597-4d40-4cd3-85d3-017daccc01a9/BARD_chr22.bed=$1
-#/sbgenomics/workspaces/d7973597-4d40-4cd3-85d3-017daccc01a9/tasks/38bc33a0-1521-453b-99a2-6c7e2e060fa3/sbg_decompressor_cwl1_0/decompressed_files/chr22.txt=$2
-
-
-
-
-shapeit_dir = $1
-file = $4
-#shapeit_dir = /sbgenomics/workspaces/d7973597-4d40-4cd3-85d3-017daccc01a9/tasks/38bc33a0-1521-453b-99a2-6c7e2e060fa3/sbg_decompressor_cwl1_0/decompressed_files/chr22.txt
-
-# I think 'file' is OK. But 'shapeit_dir' is currently every chromosome's txt file in the tar ball. 
+#input parameters
+shapeit_dir=$2
+file=$5
 
 
 # get chr from file
