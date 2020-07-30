@@ -4,20 +4,24 @@
 nr_threads=$0
 
 #input parameters
-shapeit_dir=$2
-file=$5
+bed_file=$1
+fam_file=$2
+bim_file=$3
+shapeit_dir=$4
+shapeit_script=$5
 
+plink_file=`sed 's/.bed//' $bed_file`
 
 # get chr from file
 chr=`basename $file | cut -f2 -d'_' | sed 's/chr//'`
 
 # I want this: /home/test/BARD_chr22.bim
 # Filter for duplicates, non-zero position, and chromosome
-cat /home/test/shapeit_run/get_valid_variants.R | R --vanilla --args ${file}.bim $chr
-
+#cat /home/test/shapeit_run/get_valid_variants.R | R --vanilla --args ${file}.bim $chr
+cat /home/test/shapeit_run/get_valid_variants.R | R --vanilla --args $bim_file $chr
 
 # Create PLINK input files
-plink --bfile ${file} \
+plink --bfile ${plink_file} \
       --extract ../test/chr${chr}_snps.txt \
       --make-bed --out ../test/chr${chr}
 
