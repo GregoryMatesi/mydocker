@@ -1,19 +1,20 @@
 #!/bin/sh
 
 # number of threads as a parameter
-nr_threads=$0
+nr_threads=$1
 
 #input parameters
-bed_file=$1
-fam_file=$2
-bim_file=$3
-shapeit_dir=$4
-shapeit_script=$5
+bed_file=$2
+fam_file=$3
+bim_file=$4
+shapeit_dir=$5
+#shapeit_script=$6
 
+## plink needs the the file name without an extension as input
 plink_file=`sed 's/.bed//' $bed_file`
 
 # get chr from file
-chr=`basename $file | cut -f2 -d'_' | sed 's/chr//'`
+chr=`basename $plink_file | cut -f2 -d'_' | sed 's/chr//'`
 
 # I want this: /home/test/BARD_chr22.bim
 # Filter for duplicates, non-zero position, and chromosome
