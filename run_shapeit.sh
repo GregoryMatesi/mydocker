@@ -8,7 +8,7 @@ bed_file=$2
 fam_file=$3
 bim_file=$4
 shapeit_dir=$5
-#shapeit_script=$6
+shapeit_script=$6
 
 ## plink needs the the file name without an extension as input
 plink_file=`sed 's/.bed//' $bed_file`
