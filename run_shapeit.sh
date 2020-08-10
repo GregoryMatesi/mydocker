@@ -18,7 +18,7 @@ $plink_file=`sed 's/.bed//' $bed_file`
 echo "Name of plink file is $plink_file" 1>&2
 
 # get chr from file
-chr=`basename $plink_file | cut -f2 -d'_' | sed 's/chr//'`
+$chr=`basename $plink_file | cut -f2 -d'_' | sed 's/chr//'`
 
 # I want this: /home/test/BARD_chr22.bim
 # Filter for duplicates, non-zero position, and chromosome
