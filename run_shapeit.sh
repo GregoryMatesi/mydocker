@@ -10,7 +10,7 @@ bim_file=$4
 shapeit_dir=$5
 shapeit_script=$6
 
-cat $bed_file 2> job.err.log
+echo "Name of bed_file is $bed_file" 1>&2
 
 ## plink needs the the file name without an extension as input
 plink_file=`sed 's/.bed//' $bed_file`
@@ -32,7 +32,7 @@ plink --bfile ${plink_file} \
 shapeit --input-bed  /home/test/chr${chr}.bed \
         /home/test/chr${chr}.bim \
         /home/test/chr${chr}.fam \
-        --input-map ${shapeit_dir} \
+        --input-map ${shapeit_dir}/genetic_map_hapmap/ \
         --thread ${nr_threads} \
         --output-max  chr${chr}.haps \
         /home/test/chr${chr}.samples
