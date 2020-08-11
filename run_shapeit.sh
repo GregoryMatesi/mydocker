@@ -27,8 +27,8 @@ cat /home/test/shapeit_run/get_valid_variants.R | R --vanilla --args $bim_file $
 
 # Create PLINK input files
 plink --bfile ${plink_file} \
-      --extract ../test/chr${chr}_snps.txt \
-      --make-bed --out ../test/chr${chr}
+      --extract chr${chr}_snps.txt \
+      --make-bed --out chr${chr}
 
 # comment out shapeit to run locally
 # Run shapeit.

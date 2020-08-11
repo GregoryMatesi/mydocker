@@ -7,7 +7,7 @@ chr  <- args[2]
 
 
 
-out.variant.list <- paste0("../test/chr", chr, "_snps.txt")
+out.variant.list <- paste0("chr", chr, "_snps.txt")
 
 
 #Read bim file
