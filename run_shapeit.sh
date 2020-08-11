@@ -13,8 +13,8 @@ shapeit_script=$6
 echo "Name of bed_file is $bed_file" 1>&2
 
 ## plink needs the the file name without an extension as input
-plink_file=`sed 's/.bed//' $bed_file`
-
+#plink_file=`sed 's/.bed//' $bed_file`
+plink_file=`echo $bed_file | sed 's/.bed//'`
 echo "Name of plink file is $plink_file" 1>&2
 
 # get chr from file
