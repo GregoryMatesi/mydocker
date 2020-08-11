@@ -32,11 +32,11 @@ plink --bfile ${plink_file} \
 
 # comment out shapeit to run locally
 # Run shapeit.
-#shapeit --input-bed  /home/test/chr${chr}.bed \
-#        /home/test/chr${chr}.bim \
-#        /home/test/chr${chr}.fam \
-#        --input-map ${shapeit_dir}/genetic_map_hapmap/ \
-#        --thread ${nr_threads} \
-#        --output-max  chr${chr}.haps \
-#        /home/test/chr${chr}.samples
+shapeit --input-bed  /home/test/chr${chr}.bed \
+        /home/test/chr${chr}.bim \
+        /home/test/chr${chr}.fam \
+        --input-map ${shapeit_dir}/genetic_map_hapmap/ \
+        --thread ${nr_threads} \
+        --output-max  chr${chr}.haps \
+        /home/test/chr${chr}.samples
 
