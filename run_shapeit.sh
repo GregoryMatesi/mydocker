@@ -23,7 +23,8 @@ chr=`basename $plink_file | cut -f2 -d'_' | sed 's/chr//'`
 # I want this: /home/test/BARD_chr22.bim
 # Filter for duplicates, non-zero position, and chromosome
 #cat /home/test/shapeit_run/get_valid_variants.R | R --vanilla --args ${file}.bim $chr
-cat /home/test/shapeit_run/get_valid_variants.R | R --vanilla --args $bim_file $chr
+cat /home/test/shapeit_run/get_valid_variants.R | R --vanilla --args $bim_file $chr 1>&2
+ls -lah chr22_snps.txt 1>&2
 
 # Create PLINK input files
 plink --bfile ${plink_file} \
