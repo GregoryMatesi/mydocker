@@ -5,8 +5,8 @@ nr_threads=$1
 
 #input parameters
 bed_file=$2
-fam_file=$3
-bim_file=$4
+fam_file=$4
+bim_file=$3
 shapeit_dir=$5
 shapeit_script=$6
 
